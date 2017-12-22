@@ -1,0 +1,64 @@
+<p>
+  bind works!
+</p>
+<button (click)="doClick($event)">Click me</button>
+<hr>
+<!-- dom 属性绑定 -->
+<!-- 属性绑定 -->
+<img [src]="imgUrl" alt="bind">
+
+<!-- 差值表达式 和属性绑定相同效果-->
+<img src="{{imgUrl}}" alt="bind">
+<hr>
+<input value="Angular" (input)="doOnInput($event)">
+
+<!-- disabled 就算为 false 也是 禁用 -->
+<button disabled>Click me</button>
+
+<!-- / dom 属性绑定 -->
+
+<!-- HTML 属性绑定 -->
+<table>
+  <tr>
+    <td [attr.colspan]="size">test 001</td>
+  </tr>
+</table>
+<!-- /  HTML 属性绑定 -->
+
+
+<!-- css 类绑定 -->
+<div class="one two three">
+  Go On
+</div>
+
+<div [class]="autoAddClass">
+  Go Auto
+</div>
+
+<div class="one two" [class.three]="isBlack">
+  Go Auto one style
+</div>
+
+<div [ngClass]="divClass">
+  Go control all Class
+</div>
+<!-- / css 类绑定 -->
+<hr>
+<!-- style 绑定 -->
+<div [style.color]="isDev?'blue':'yellow'">
+  style bind
+</div>
+<div [style.font-size.em]="isDev?2:3">
+  style singer bind
+</div>
+<div [ngStyle]="divStyle">
+  div style bind
+</div>
+
+<!-- / style 绑定 -->
+<hr>
+<!-- 双向绑定 -->
+<!-- 使用 ngModel 需要引入 FormsModule -->
+<input [(ngModel)]="name"> {{name}}
+<!-- / 双向绑定 -->
+
