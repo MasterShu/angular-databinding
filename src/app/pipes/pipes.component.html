@@ -1,0 +1,29 @@
+<p>
+  pipes works!
+</p>
+<p>
+  today is {{ nowTime | date | uppercase }}
+</p>
+<p>
+  today is {{ nowTime | date | lowercase }}
+</p>
+<p>
+  today is {{ nowTime | date:'yyyy-MM-dd HH:mm:ss' }}
+</p>
+<hr>
+<p>
+  π is {{ pi }}
+</p>
+<p>
+  π is {{ pi | number:'2.1-4' }}
+</p>
+<p>
+  π is {{ pi | number:'2.2-2' }}
+</p>
+<hr>
+<p>
+  custom pipe {{ customNum | multiple}}
+</p>
+<p>
+  custom pipe {{ customNum | multiple:2}}
+</p>
